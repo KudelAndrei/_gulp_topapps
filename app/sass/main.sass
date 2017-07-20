@@ -30,15 +30,149 @@ html, body
 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
 	overflow-x: hidden
+	margin: 0
+	color: #303030
+
+ul,li
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+a
+	color: #303030
+	text-decoration: none
+	&:active, &:focus
+		text-decoration: none
+
+.btn
+	border: none
+	text-transform: uppercase
+	padding: 1.5em 3em
+	margin-right: 20px
+	margin-bottom: 20px
+	border-radius: 5px
+	cursor: pointer
+	transition: all 0.3s
+	&:hover
+		box-shadow: 9px 9px 20px rgba(0,0,0,.15), 9px 0 15px rgba(0,0,0,.04), 0 0 1px rgba(0,0,0,.09)
+	&.btn--accent
+		background-color: $accent
+		border: 1px solid #fff
+		color: #fff
+	&.btn--white
+		background-color: #fff
+
+.flex-center
+	margin: auto
+
+.header
+	background-color: #fff
+	min-height: 700px
+	height: 100vh
+	display: flex
+	flex-direction: column
+	
+.navigation
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 30px 0
+	
+.logo
+	max-width: 190px
+
+.menu
+	display: flex
+	height: 100%
+	.menu__item
+		text-transform: uppercase
+		padding-right: 28px
+		font-weight: 600
+		&:last-child 
+			margin-right: 0
+		&.active, &:hover
+			>a
+				color: $accent
+		
+
+.header-center
+	position: relative
+	background-color: $accent
+	color: #fff
+	display: flex
+	flex: 1
+
+.header-carousel__apps
+	font-size: 40px
+	font-weight: 500
+.header-carousel__head
+	font-size: 40px
+	line-height: 1.4
+	span
+		font-weight: 400
+.header-carousel__desc
+	margin-bottom: 30px
+.header-carousel__img
+	max-width: 100%
+	img
+		width: 100%
 
 
+.section
+	position: relative
+	padding: 50px 0 80px
+	&.section-gray
+		background-color: #f6f6f6
+	&.section-accent
+		background-color: $accent
+		color: #fff
+	.section-center
+		text-align: center
+	.section__head
+		font-size: 30px
+		text-transform: uppercase
+		color: $accent
+		margin-bottom: 10px
+	.section__line
+		display: inline-block
+		width: 5px
+		height: 5px
+		border-radius: 50%
+		background-color: $accent
+		position: relative
+		margin-bottom: 10px
+		box-shadow: 10px 0 $accent, -10px 0 $accent
+		&::before
+			content: ""
+			position: absolute
+			left: -60px
+			top: 2px
+			width: 40px
+			height: 1px
+			background-color: $accent
+			box-shadow: 85px 0 $accent
+	.section__desc
+		max-width: 700px
+		color: #606060
+		margin: 0 auto
+		margin-bottom: 50px
+		font-weight: 600
 
+.overview
+	.overview-item
+		background-color: #fff
+		padding: 60px 20px 20px
+		text-align: center
+		.overview-item__img
+			margin-bottom: 20px
+		.overview-item__head
+			text-transform: uppercase
 
 
 @import "media" // Всегда в конце
