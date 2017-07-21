@@ -132,6 +132,14 @@ a
 	&.section-accent
 		background-color: $accent
 		color: #fff
+		.section__head, .section__desc, .section__line
+			color: #fff
+		.section__line, .section__line::before
+			background-color: #fff
+		.section__line
+			box-shadow: 10px 0 #fff, -10px 0 #fff
+		.section__line::before
+			box-shadow: 85px 0 #fff
 	.section-center
 		text-align: center
 	.section__head
@@ -169,10 +177,52 @@ a
 		background-color: #fff
 		padding: 60px 20px 20px
 		text-align: center
+		margin-bottom: 20px
 		.overview-item__img
 			margin-bottom: 20px
 		.overview-item__head
 			text-transform: uppercase
 
+
+.work-questions
+	.work-questions__head
+		text-transform: uppercase
+		font-weight: 700
+		color: $accent
+		font-size: 24px
+		margin-bottom: 15px
+.work-questions__img
+	max-width: 100%
+	>img
+		&:first-child
+			z-index: 1
+		&:last-child
+			position: absolute
+			top: 60px
+			right: 0
+			z-index: -1
+
+
+
+.features__item
+	display: flex
+	margin-bottom: 30px
+	.features__text
+		text-align: right
+	.features__head
+		font-weight: 700
+		font-size: 22px
+		text-transform: uppercase
+		margin-bottom: 5px
+		margin-top: 0
+	.features__img
+		padding: 0 20px
+		align-self: center
+.features__imgage
+	max-width: 250px
+	text-align: center
+	>img
+		display: inline-block
+		width: 100%
 
 @import "media" // Всегда в конце
