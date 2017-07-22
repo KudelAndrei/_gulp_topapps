@@ -203,10 +203,17 @@ a
 			z-index: -1
 
 
-
+.features-items
+	&.features-items--left
+		.features__text
+			text-align: left
+		.features__item
+			&::before, &::after
+				left: -30px
 .features__item
 	display: flex
 	margin-bottom: 30px
+	position: relative
 	.features__text
 		text-align: right
 	.features__head
@@ -218,11 +225,41 @@ a
 	.features__img
 		padding: 0 20px
 		align-self: center
+	&::before, &::after
+		content: ""
+		position: absolute
+		background-color: #fff
+		top: 50%
+		right: -30px
+	&::before
+		width: 30px
+		height: 1px
+	&::after
+		width: 1px
+		height: calc(100% + 30px)
+	&:last-child
+		margin-bottom: 0
+		&::after
+			display: none
 .features__imgage
-	max-width: 250px
 	text-align: center
 	>img
 		display: inline-block
+		msx-width: 250px
+
+
+.screenshots-carousel
+	display: flex
+.screenshots__item
+	max-width: 25%
+	margin-right: 30px
+	>img
 		width: 100%
+
+
+.people__item
+	display: flex
+	
+
 
 @import "media" // Всегда в конце
