@@ -9,19 +9,35 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.menu
+		display: none
 	.features__item
 		&::before, &::after
 			display: none
+	.subscribe
+		flex-wrap: wrap
+		.subscribe-left
+			margin-bottom: 20px
+		.subscribe-right
+			width: 100%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.teams
+		.team__item
+			margin-right: 0
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.callback
+		.wrap-flex
+			flex-wrap: wrap
+			>input
+				&:first-child
+					margin-right: 0
 
 
 /* Custom, iPhone Retina */
